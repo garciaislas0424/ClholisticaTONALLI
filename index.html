@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clínica Holística Tonalli</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+color:#333;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero{
+max-width:850px;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#0ea5a4;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+margin:10px;
+}
+
+.btn:hover{
+background:#0b8b89;
+transform:scale(1.05);
+}
+
+/* TITULOS */
+
+section{
+padding:80px 8%;
+}
+
+.titulo{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#0f172a;
+}
+
+/* CARRUSEL */
+
+.slider{
+width:100%;
+overflow:hidden;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.slides{
+display:flex;
+width:500%;
+animation:slide 25s infinite;
+}
+
+.slide{
+width:100%;
+position:relative;
+}
+
+.slide img{
+width:100%;
+height:550px;
+object-fit:cover;
+}
+
+.slide-text{
+position:absolute;
+bottom:40px;
+left:40px;
+background:rgba(0,0,0,.55);
+padding:20px;
+border-radius:15px;
+color:white;
+max-width:400px;
+}
+
+.slide-text h2{
+margin-bottom:10px;
+font-size:30px;
+}
+
+@keyframes slide{
+
+0%{margin-left:0;}
+20%{margin-left:0;}
+
+25%{margin-left:-100%;}
+45%{margin-left:-100%;}
+
+50%{margin-left:-200%;}
+70%{margin-left:-200%;}
+
+75%{margin-left:-300%;}
+95%{margin-left:-300%;}
+
+100%{margin-left:-400%;}
+
+}
+
+/* BENEFICIOS */
+
+.beneficios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.beneficio{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.beneficio:hover{
+transform:translateY(-8px);
+}
+
+.beneficio h3{
+margin:15px 0;
+color:#0ea5a4;
+}
+
+/* SERVICIOS */
+
+.servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:#0ea5a4;
+margin-bottom:15px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:2;
+}
+
+/* UTENSILIOS */
+
+.utensilios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.item{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.item img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.item h4{
+padding:20px;
+text-align:center;
+}
+
+/* FORMULARIO */
+
+.cita{
+background:
+linear-gradient(rgba(14,165,164,.9),rgba(14,165,164,.9)),
+url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+border-radius:30px;
+padding:50px;
+color:white;
+}
+
+.formulario{
+max-width:800px;
+margin:auto;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select{
+width:100%;
+padding:16px;
+margin-bottom:20px;
+border:none;
+border-radius:12px;
+font-size:16px;
+outline:none;
+}
+
+.formulario label{
+font-weight:600;
+display:block;
+margin-bottom:10px;
+}
+
+.checks{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+color:#111;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:10px;
+}
+
+.checks label{
+font-weight:500;
+}
+
+.formulario button{
+width:100%;
+padding:18px;
+border:none;
+background:#111827;
+color:white;
+font-size:18px;
+border-radius:12px;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+}
+
+.formulario button:hover{
+background:black;
+}
+
+/* UBICACION */
+
+.ubicacion{
+text-align:center;
+}
+
+.ubicacion a{
+display:inline-block;
+margin:10px;
+padding:16px 35px;
+background:#0ea5a4;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.slide img{
+height:350px;
+}
+
+.titulo{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header>
+
+<div class="hero">
+
+<h1>Clínica Holística Tonalli</h1>
+
+<p>
+Bienestar, salud y armonía para cuerpo y mente. 
+Tratamientos estéticos, terapias holísticas y masajes profesionales.
+</p>
+
+<a href="#cita" class="btn">Agendar Cita</a>
+<a href="#servicios" class="btn">Ver Servicios</a>
+
+</div>
+
+</header>
+
+<!-- CARRUSEL -->
+
+<section>
+
+<h2 class="titulo">Experiencias Tonalli</h2>
+
+<div class="slider">
+
+<div class="slides">
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1600&auto=format&fit=crop">
+<div class="slide-text">
+<h2>Mesoterapia Facial</h2>
+<p>Rejuvenece tu piel y mejora su apariencia.</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop">
+<div class="slide-text">
+<h2>Masajes Relajantes</h2>
+<p>Reduce estrés y mejora tu bienestar.</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1600&auto=format&fit=crop">
+<div class="slide-text">
+<h2>Ozonoterapia</h2>
+<p>Ayuda a revitalizar el organismo.</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1600&auto=format&fit=crop">
+<div class="slide-text">
+<h2>Dermapen</h2>
+<p>Tratamiento para regeneración facial.</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1600&auto=format&fit=crop">
+<div class="slide-text">
+<h2>Tonalli</h2>
+<p>Tu espacio de bienestar integral.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BENEFICIOS -->
+
+<section>
+
+<h2 class="titulo">Beneficios</h2>
+
+<div class="beneficios">
+
+<div class="beneficio">
+<h3>✨ Relajación Total</h3>
+<p>Reduce el estrés y mejora tu descanso.</p>
+</div>
+
+<div class="beneficio">
+<h3>💆 Bienestar Corporal</h3>
+<p>Ayuda a aliviar dolores musculares y tensión.</p>
+</div>
+
+<div class="beneficio">
+<h3>🌿 Terapias Naturales</h3>
+<p>Tratamientos enfocados en equilibrio y salud.</p>
+</div>
+
+<div class="beneficio">
+<h3>💎 Belleza y Estética</h3>
+<p>Mejora la apariencia de tu piel y cuerpo.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section id="servicios">
+
+<h2 class="titulo">Nuestros Servicios</h2>
+
+<div class="servicios">
+
+<div class="card">
+
+<h3>Estética Avanzada</h3>
+
+<ul>
+<li>Mesoterapia facial y corporal</li>
+<li>Lipopapada no invasiva</li>
+<li>Dermapen</li>
+<li>Rinomodelación</li>
+<li>Retiro de verrugas y lunares</li>
+<li>Tóxina botulínica</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Terapias Holísticas</h3>
+
+<ul>
+<li>Ozonoterapia</li>
+<li>Ozono-acupuntoterapia</li>
+<li>Hidro-ozonoterapia</li>
+<li>Reflexoterapia con ozono</li>
+<li>Auriculoterapia</li>
+<li>Terapia física</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Masajes Especializados</h3>
+
+<ul>
+<li>Masaje reductivo</li>
+<li>Masaje relajante</li>
+<li>Masaje aromaterapia</li>
+<li>Masaje descontracturante</li>
+<li>Masaje terapéutico</li>
+<li>Masaje prenatal</li>
+<li>Masaje deportivo</li>
+<li>Drenaje linfático</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- UTENSILIOS -->
+
+<section>
+
+<h2 class="titulo">Instalaciones y Herramientas</h2>
+
+<div class="utensilios">
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+<h4>Camillas Profesionales</h4>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop">
+<h4>Equipos de Ozonoterapia</h4>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop">
+<h4>Aceites y Aromaterapia</h4>
+</div>
+
+<div class="item">
+<img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200&auto=format&fit=crop">
+<h4>Equipo Facial Estético</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- FORMULARIO -->
+
+<section id="cita">
+
+<div class="cita">
+
+<h2 class="titulo" style="color:white;">Agenda Tu Cita</h2>
+
+<div class="formulario">
+
+<input type="text" id="nombre" placeholder="Nombre y Apellido">
+
+<input type="tel" id="telefono" placeholder="Número Telefónico">
+
+<label>Selecciona uno o más servicios:</label>
+
+<div class="checks">
+
+<label><input type="checkbox" value="Mesoterapia Facial"> Mesoterapia Facial</label>
+
+<label><input type="checkbox" value="Dermapen"> Dermapen</label>
+
+<label><input type="checkbox" value="Masaje Relajante"> Masaje Relajante</label>
+
+<label><input type="checkbox" value="Masaje Deportivo"> Masaje Deportivo</label>
+
+<label><input type="checkbox" value="Ozonoterapia"> Ozonoterapia</label>
+
+<label><input type="checkbox" value="Drenaje Linfático"> Drenaje Linfático</label>
+
+<label><input type="checkbox" value="Auriculoterapia"> Auriculoterapia</label>
+
+<label><input type="checkbox" value="Terapia Física"> Terapia Física</label>
+
+</div>
+
+<label>Selecciona Fecha:</label>
+<input type="date" id="fecha">
+
+<label>Selecciona Horario:</label>
+<input type="time" id="hora">
+
+<textarea id="mensaje" rows="4" placeholder="Comentarios adicionales"></textarea>
+
+<label>
+<input type="checkbox" id="domicilio">
+ Compartir ubicación para servicio a domicilio
+</label>
+
+<br><br>
+
+<button onclick="enviarWhatsApp()">
+Enviar vía WhatsApp
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- UBICACION -->
+
+<section class="ubicacion">
+
+<h2 class="titulo">Encuéntranos</h2>
+
+<a href="https://maps.google.com" target="_blank">
+📍 UBICACIÓN
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Clínica Holística Tonalli | Bienestar Integral
+</p>
+
+</footer>
+
+<script>
+
+function enviarWhatsApp(){
+
+let nombre = document.getElementById('nombre').value;
+let telefono = document.getElementById('telefono').value;
+let fecha = document.getElementById('fecha').value;
+let hora = document.getElementById('hora').value;
+let mensaje = document.getElementById('mensaje').value;
+
+let servicios = [];
+document.querySelectorAll('input[type=checkbox]:checked').forEach((el)=>{
+if(el.value){
+servicios.push(el.value);
+}
+});
+
+let domicilio = document.getElementById('domicilio').checked;
+
+let texto =
+`Hola, quiero agendar una cita en Clínica Tonalli.%0A%0A` +
+
+`👤 Nombre: ${nombre}%0A` +
+
+`📞 Teléfono: ${telefono}%0A` +
+
+`💆 Servicios: ${servicios.join(', ')}%0A` +
+
+`📅 Fecha: ${fecha}%0A` +
+
+`⏰ Hora: ${hora}%0A` +
+
+`📝 Comentarios: ${mensaje}%0A`;
+
+if(domicilio){
+
+texto += `%0A📍 Compartiré mi ubicación para servicio a domicilio.`;
+
+}
+
+let numeroWhatsApp = "5217711173029";
+
+window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
