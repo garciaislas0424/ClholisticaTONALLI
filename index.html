@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clínica Holística Tonalli</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#333;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero{
+max-width:850px;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#0ea5a4;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#08918f;
+transform:scale(1.05);
+}
+
+/* SECCIONES */
+
+section{
+padding:80px 8%;
+}
+
+.titulo{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#0f172a;
+}
+
+/* BANNER */
+
+.banner{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card-img{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+height:300px;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.card-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.card-img:hover img{
+transform:scale(1.1);
+}
+
+.card-img span{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:15px;
+background:rgba(0,0,0,.6);
+color:white;
+font-size:20px;
+font-weight:600;
+}
+
+/* SERVICIOS */
+
+.servicios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#0ea5a4;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.card ul{
+padding-left:20px;
+line-height:2;
+}
+
+/* FORMULARIO */
+
+.cita{
+background:
+linear-gradient(rgba(14,165,164,.85),rgba(14,165,164,.85)),
+url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+color:white;
+border-radius:30px;
+}
+
+.formulario{
+max-width:700px;
+margin:auto;
+}
+
+.formulario input,
+.formulario textarea{
+width:100%;
+padding:16px;
+margin-bottom:20px;
+border:none;
+border-radius:12px;
+font-size:16px;
+outline:none;
+}
+
+.formulario button{
+width:100%;
+padding:16px;
+border:none;
+background:#111827;
+color:white;
+font-size:18px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+font-weight:600;
+}
+
+.formulario button:hover{
+background:#000;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.titulo{
+font-size:32px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header>
+
+<div class="hero">
+
+<h1>Clínica Holística Tonalli</h1>
+
+<p>
+Bienestar, armonía y belleza para cuerpo y mente.
+Tratamientos estéticos, terapias holísticas y masajes especializados.
+</p>
+
+<a href="#cita" class="btn">Agendar Cita</a>
+
+</div>
+
+</header>
+
+<!-- BANNER -->
+
+<section>
+
+<h2 class="titulo">Nuestros Servicios</h2>
+
+<div class="banner">
+
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop">
+<span>Mesoterapia Facial</span>
+</div>
+
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
+<span>Masajes Terapéuticos</span>
+</div>
+
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1200&auto=format&fit=crop">
+<span>Dermapen</span>
+</div>
+
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop">
+<span>Ozonoterapia</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section>
+
+<h2 class="titulo">Tratamientos y Terapias</h2>
+
+<div class="servicios">
+
+<div class="card">
+
+<h3>Tratamientos Estéticos</h3>
+
+<ul>
+<li>Mesoterapia facial y corporal</li>
+<li>Lipopapada no invasiva</li>
+<li>Dermapen</li>
+<li>Rinomodelación con ácido hialurónico</li>
+<li>Retiro de verrugas y lunares</li>
+<li>Tóxina botulínica</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Terapias Holísticas</h3>
+
+<ul>
+<li>Ozonoterapia</li>
+<li>Ozono-acupuntoterapia</li>
+<li>Hidro-ozonoterapia</li>
+<li>Reflexoterapia con ozono</li>
+<li>Auriculoterapia</li>
+<li>Terapia física</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Masajes Especializados</h3>
+
+<ul>
+<li>Masaje reductivo</li>
+<li>Masaje relajante</li>
+<li>Masaje con aromaterapia</li>
+<li>Masaje descontracturante</li>
+<li>Masaje terapéutico</li>
+<li>Masaje prenatal</li>
+<li>Masaje deportivo</li>
+<li>Drenaje linfático</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORMULARIO -->
+
+<section id="cita">
+
+<div class="cita">
+
+<h2 class="titulo" style="color:white;">Agenda Tu Cita</h2>
+
+<div class="formulario">
+
+<input type="text" id="nombre" placeholder="Nombre y Apellido">
+
+<input type="tel" id="telefono" placeholder="Número Telefónico">
+
+<textarea id="mensaje" rows="5" placeholder="Escribe el servicio que deseas"></textarea>
+
+<button onclick="enviarWhatsApp()">
+Enviar vía WhatsApp
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Clínica Holística Tonalli | Bienestar Integral
+</p>
+
+</footer>
+
+<script>
+
+function enviarWhatsApp(){
+
+let nombre = document.getElementById('nombre').value;
+let telefono = document.getElementById('telefono').value;
+let mensaje = document.getElementById('mensaje').value;
+
+let texto =
+`Hola, quiero agendar una cita.%0A%0A` +
+`Nombre: ${nombre}%0A` +
+`Teléfono: ${telefono}%0A` +
+`Servicio: ${mensaje}`;
+
+let numeroWhatsApp = "5217711173029";
+
+window.open(`https://wa.me/${numeroWhatsApp}?text=${texto}`,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
